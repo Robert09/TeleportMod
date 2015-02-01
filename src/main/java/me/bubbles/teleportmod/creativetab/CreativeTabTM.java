@@ -11,10 +11,5 @@ public class CreativeTabTM {
         public Item getTabIconItem() {
             return ModItems.coordinateCache;
         }
-
-        @Override
-        public String getTranslatedTabLabel() {
-            return "Teleport Mod";
-        }
     };
 }

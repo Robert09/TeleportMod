@@ -1,7 +1,12 @@
+#Keys
+keys.teleportmod.category=Teleport Mod
+keys.teleportmod.get_coordinates=Get Coordinates
+
+#CreativeTabs
+itemGroup.teleportMod=Teleport Mod
+
 #Items
 item.coordinateCache.name=Coordinate Cache
 
 #Blocks
 tile.teleporter.name=Teleporter
-
-#Guis

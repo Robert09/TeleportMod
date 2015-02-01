@@ -1,8 +1,10 @@
 package me.bubbles.teleportmod;
 
+import me.bubbles.teleportmod.client.handler.KeyInputEventHandler;
 import me.bubbles.teleportmod.handler.ConfigurationHandler;
 import me.bubbles.teleportmod.init.ModBlocks;
 import me.bubbles.teleportmod.init.ModItems;
+import me.bubbles.teleportmod.init.ModRecipes;
 import me.bubbles.teleportmod.proxy.IProxy;
 import me.bubbles.teleportmod.reference.Reference;
 import me.bubbles.teleportmod.utility.LogHelper;
@@ -26,16 +28,22 @@ public class TeleportMod {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.info("Pre Initialization complete!");
+
+        proxy.registerKeyBindings();
 
         ModItems.init();
 
         ModBlocks.init();
+
+        LogHelper.info("Pre Initialization complete!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         proxy.registerRenders();
+
+        ModRecipes.init();
         LogHelper.info("Initialization complete!");
     }
 
