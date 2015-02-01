@@ -1,0 +1,17 @@
+[
+{
+  "modid": "teleportmod",
+  "name": "Teleport Mod",
+  "description": "A mod that adds just a little bit of easier transportation!",
+  "version": "1.0",
+  "mcversion": "1.8",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["O3Bubbles09"],
+  "credits": "Made by O3Bubbles09",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
